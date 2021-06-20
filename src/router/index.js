@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import AllTodosView from '../views/AllTodosView'
 import InProgressTodosView from '../views/InProgressTodosView'
 import DoneTodosView from '../views/DoneTodosView'
-
+import UserDetails from '../views/UserDetails'
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,6 +21,11 @@ const routes = [
     path: '/done',
     name: 'Done',
     component: DoneTodosView,
+  },
+  {
+    path: '/users/:id',
+    name: 'UserDetails',
+    component: UserDetails,
   }
 ]
 

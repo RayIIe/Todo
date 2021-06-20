@@ -4,15 +4,51 @@
       "id": 1,
       "title": "Clean my room",
       "author": "dawid",
+      "userId": 1,
+      "projectId": 1,
       "dateStarted": "2020-10-10T09:00:00",
       "done": true
     },
     {
       "id": 2,
       "title": "Do my homework",
-      "author": "dawid",
+      "userId": 2,
+      "projectId": 2,
       "dateStarted": "2020-10-11T09:00:00",
+      "done": true
+    },
+    {
+      "id": 1624139154883,
+      "title": "Hello world",
+      "userId": 1,
+      "dateStarted": "2021-06-19T21:45:54.883Z",
       "done": false
+    },
+    {
+      "id": 1624139631293,
+      "title": "test222",
+      "userId": 2,
+      "dateStarted": "2021-06-19T21:53:51.293Z",
+      "done": false
+    },
+    {
+      "id": 1624139677786,
+      "title": "test22$$$4",
+      "userId": 2,
+      "dateStarted": "2021-06-19T21:54:37.786Z",
+      "done": false
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Dawid",
+      "lastName": "Dzieniszewski"
+    },
+    {
+      "id": 2,
+      "firstName": "Piotr",
+      "lastName": "Nowak"
     }
   ]
 }

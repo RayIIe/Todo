@@ -1,30 +1,23 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { ApiService } from '../services/ApiService'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    todos: [],
-    filter: '',
+     filter: ''
   },
-  getters: {
-    filteredTodos: state => state.todos.filter(todo => todo.title.toLowerCase().includes(state.filter.toLowerCase())),
-    todos: (state, getters) => getters.filteredTodos,
-    doneTodos: (state, getters) => getters.filteredTodos.filter(item => item.done),
-    inProgressTodos: (state, getters) => getters.filteredTodos.filter(item => !item.done),
-  },
-  mutations: {
-    SET_TODOS (state, todos) {
-      state.todos = todos
-    },
-  },
+  mutations: {},
   actions: {
-    createTask: ({ state }, task) => {
-      state.todos.push(task)
+    updateTodo: async (ctx, todo) => {
+      await ApiService.updateTodo(todo)
     },
-    deleteTask: ({ state }, id) => {
-      state.todos = state.todos.filter(x => x.id !== id)
+    createTask: async (ctx, task) => {
+      await ApiService.createTodo(task)
+    },
+    deleteTask: async (ctx, id) => {
+      await ApiService.deleteTodoById(id)
     },
   },
   modules: {

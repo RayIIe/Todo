@@ -1,18 +1,12 @@
 <template>
-  <div>
-    <todo v-for="(item, index) in $store.getters['doneTodos']"
-          :key="index"
-          :todo="item"
-          @delete="() => $store.dispatch('deleteTask', item.id)"
-    />
-  </div>
+    <TodoListView :is-done="true"/>
 </template>
 
 <script>
-import Todo from '../components/Todo'
+import TodoListView from './TodoListView'
 
 export default {
-  components: { Todo },
+ components: { TodoListView },
 }
 </script>
 
